@@ -58,10 +58,9 @@ function App() {
 
       {/* <UseMemoDemoComponent /> */}
       {/* <UseCallbackDemoComponent /> */}
-
-      <NavbarComponent />
-      <Container>
-        <BrowserRouter>
+      <BrowserRouter>
+        <NavbarComponent />
+        <Container>
           <Routes>
             <Route element={<SecureRoute />}>
               <Route path="/" element={<EmployeeList />} exact></Route>
@@ -79,8 +78,8 @@ function App() {
             <Route path="/login" element={<Login />}></Route>
             <Route path="*" element={<NotFound />}></Route>
           </Routes>
-        </BrowserRouter>
-      </Container>
+        </Container>
+      </BrowserRouter>
     </>
   );
 }
